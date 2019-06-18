@@ -15,8 +15,11 @@ const store = createStore(reducer);
 function App() {
     return (
       <div className="App">
-        <TodoList />
-        <TodoForm />
+        <div className="container">
+          <h2>Todo List</h2>
+          <TodoList />
+          <TodoForm />
+        </div>
       </div>
     );
   }

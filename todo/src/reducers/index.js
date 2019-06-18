@@ -1,16 +1,18 @@
 import { ADD_TODO, COMPLETE_TODO } from '../actions/actions'
 
 const initialState = { todos: [
-    { id:0, item: 'test', completed: false},
-    { id:1, item: 'test2', completed: false}
+    { id:0, task: 'test', tags:[], completed: false},
+    { id:1, task: 'test2', tags:[], completed: false}
 ]}
 
 export const reducer = (state = initialState.todos, action) => {
     switch (action.type) {
         case ADD_TODO:
-            const item = action.payload
+            console.log(action.payload)
+            const task = action.payload.task
+            const tags = action.payload.tags
             return [                
-               ...state, {id: state.length + item, item: item, completed: false}
+               ...state, {id: state.length + task, task: task, tags: tags, completed: false}
             ]
         case COMPLETE_TODO:
              const id = action.payload

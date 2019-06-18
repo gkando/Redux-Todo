@@ -4,28 +4,28 @@ import { completeTodo } from '../actions/actions';
 
 
 const todoList = props => {
-
-      console.log(props)
     return (
-      <div>
-        <ul>
+      <div className='todoList'>
         {props.todos.map((todo) => {
           return (
-            <li key={todo.id} 
+            <div className='todoTask' key={todo.id} 
                 onClick={() => props.completeTodo(todo.id)}
                 style={{
                   textDecoration: todo.completed ? 'line-through' : 'none'
                 }}
-            > {todo.item} </li>
+            >  <h3>{todo.task} </h3>
+            <ul className='taskTags'>
+                {todo.tags.map((tag) => {
+                  return (
+                  <li>{tag.value}</li>)
+                })}
+              </ul>
+            </div>
           );
         })}
-        </ul>
       </div>
-
     );
   }
-
-
 const mapStateToProps = state => {
   return {
     todos: state,

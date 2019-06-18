@@ -9033,6 +9033,11 @@ table@^5.2.3:
     slice-ansi "^2.1.0"
     string-width "^3.0.0"
 
+taggle@^1.14.4:
+  version "1.14.4"
+  resolved "https://registry.yarnpkg.com/taggle/-/taggle-1.14.4.tgz#9dccb3c5e14f2bb590e224606824eb5c70bb47a6"
+  integrity sha512-iovbZPZw1598o9U9CzGodF2Ckot33H+OQ91ZTDwx6tIw4M5UBiDbZnd7QIkndad4sYPWOyaSCNcKkMSlBz6+Mg==
+
 tapable@^1.0.0, tapable@^1.1.0:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-1.1.3.tgz#a1fccc06b58db61fd7a45da2da44f5f3a3e67ba2"
